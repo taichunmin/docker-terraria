@@ -1,0 +1,12 @@
+version: '2'
+services:
+  terraria:
+    image: taichunmin/terraria:latest
+    ports:
+      - "${TERRARIA_7777}:7777"
+    volumes:
+      - "${TERRARIA_WORLD}:/world"
+      - "${TERRARIA_SERVERCONFIG}:/opt/terraria/serverconfig.txt"
+    restart: always
+    stdin_open: true
+    tty: true
